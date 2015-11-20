@@ -7,6 +7,9 @@
 //
 
 #import "FirstViewController.h"
+#import "SecondViewController.h"
+#import <AFNetworking.h>
+
 
 @interface FirstViewController ()
 
@@ -16,7 +19,19 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
+    UIButton *testBtn = [UIButton buttonWithType:UIButtonTypeCustom];
+    [testBtn addTarget:self action:@selector(pushTest) forControlEvents:UIControlEventTouchUpInside];
+    testBtn.frame = CGRectMake(100, 100, 100, 100);
+    [self.view addSubview:testBtn];
     // Do any additional setup after loading the view, typically from a nib.
+}
+
+- (void)pushTest
+{
+    SecondViewController *secControl = [[SecondViewController alloc] init];
+    [self.navigationController pushViewController:secControl animated:YES];
+    
 }
 
 - (void)didReceiveMemoryWarning {
