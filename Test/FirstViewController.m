@@ -24,6 +24,8 @@
     [testBtn addTarget:self action:@selector(pushTest) forControlEvents:UIControlEventTouchUpInside];
     testBtn.frame = CGRectMake(100, 100, 100, 100);
     [self.view addSubview:testBtn];
+    
+    
     // Do any additional setup after loading the view, typically from a nib.
 }
 
